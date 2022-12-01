@@ -21,10 +21,10 @@ function AdminNav() {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-3 mb-lg-0">
         <li className="nav-item">
-          <Link className="nav-link active" aria-current="page"  style={{color:"green"}}>Home</Link>
+          <Link className="nav-link active" aria-current="page" to='/adminHome' style={{color:"green"}}>Home</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link"   style={{color:"green"}}>UserInfo</Link>
+          <Link className="nav-link" to='/userinfo'  style={{color:"green"}}>UserInfo</Link>
         </li>
        
        

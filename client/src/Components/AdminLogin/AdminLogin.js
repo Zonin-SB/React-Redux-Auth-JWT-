@@ -10,7 +10,7 @@ function AdminLogin() {
     const [error,setError]=useState('')
     const navigate=useNavigate()
 
-    async function loginUser(event){
+    async function loginAdmin(event){
         event.preventDefault()
       const response=await fetch('http://localhost:3001/admin/api/login',{
             method:'POST',
@@ -24,12 +24,14 @@ function AdminLogin() {
             })
         })
         const data=await response.json()
+        console.log('admin login data');
+        console.log(data);
         
         if(data.user){
           localStorage.setItem('token',data.user)
           const user=jwt(data.user)
          
-          localStorage.setItem('userName',user.name)
+          localStorage.setItem('adminName',user.name)
         
           
             navigate('/adminHome')
@@ -49,7 +51,7 @@ function AdminLogin() {
             <div className="card-body p-5">
               <h2 className="text-uppercase text-center mb-5">Admin Login</h2>
 
-              <form onSubmit={loginUser}>
+              <form onSubmit={loginAdmin}>
 
                
 

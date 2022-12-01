@@ -23,10 +23,12 @@ function SignupForm() {
         })
     })
     const data=await response.json()
-    if(data.status==='ok'){
-        navigate('/')
+    console.log(data);
+    if(data.status==='error'){
+      setError(data)
+       
     }else{
-        setError(data)
+      navigate('/')
     }
     }
 

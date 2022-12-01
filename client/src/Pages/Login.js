@@ -17,6 +17,8 @@ function Login() {
       }else{
         navigate('/')
       }
+    }else{
+      navigate('/')
     }
   
     
